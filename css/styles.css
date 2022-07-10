@@ -138,7 +138,7 @@ ul {
     margin-right: 10px;
 }
 
-.hero-overlay {
+.hero {
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
@@ -157,6 +157,9 @@ ul {
 }
 
 .hero-title {
+    max-width: 696px;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
@@ -211,7 +214,6 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
     height: 120px;
     margin-bottom: var(--set-gap);
     border-radius: 4px;
@@ -301,13 +303,16 @@ ul {
     margin-right: 10px;
 }
 
-.team-link {
+.team-link,
+.social-link {
     display: flex;
     width: 44px;
     height: 44px;
+    border-radius: 50%;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
     color: #AFB1B8;
 }
 
@@ -315,8 +320,8 @@ ul {
     fill: currentColor;
 }
 
-.team-link:hover {
-    border-radius: 50%;
+.team-link:hover,
+.team-link:focus {
     background-color: var(--accent-color);
     color: var(--secondary-text-color);
 }
@@ -327,7 +332,6 @@ ul {
 
 .client-link {
     display: flex;
-    width: 170px;
     height: 92px;
     justify-content: center;
     align-items: center;
@@ -384,11 +388,16 @@ ul {
     color: var(--secondary-text-color);
 }
 
-.portfolio-item:hover {
+.portfolio-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio-link:hover,
+.portfolio-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
         0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
-
 }
 
 .portfolio-content {
@@ -413,7 +422,7 @@ ul {
 }
 
 .address {
-    display: flex;
+
     font-style: inherit;
     color: var(--footer-address-color);
 }
@@ -441,8 +450,10 @@ ul {
     margin-bottom: 9px;
 }
 
-.footer-links-box {
-    margin-left: 70px;
+.footer-container {
+    display: flex;
+    align-items: baseline;
+    gap: 70px;
 }
 
 
@@ -463,13 +474,6 @@ ul {
 }
 
 .footer-social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
     color: var(--secondary-text-color);
 }
 
